@@ -1,0 +1,215 @@
+.heroContainer {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.heroCard {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  padding: 40px 40px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-glow);
+}
+
+.heroHeader {
+  margin-bottom: 10px;
+}
+
+.heroName {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.nameHighlight {
+  color: var(--accent);
+}
+
+.typewriterContainer {
+  margin-bottom: 30px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typewriterText {
+  font-size: 52px;
+  font-weight: 600;
+  color: #40e0d0;
+  border-right: 3px solid #40e0d0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 1s infinite;
+  min-height: 1.2em;
+}
+
+@keyframes blink {
+  0%, 50% { border-color: #40e0d0; }
+  51%, 100% { border-color: transparent; }
+}
+
+.heroDescription {
+  margin-bottom: 40px;
+}
+
+.descriptionText {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cccccc;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.signature {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 24px;
+  color: #40e0d0;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.socialMedia {
+  margin-bottom: 40px;
+}
+
+.socialList {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(64, 224, 208, 0.1);
+  border: 2px solid rgba(64, 224, 208, 0.3);
+  border-radius: 50%;
+  color: #40e0d0;
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  background: rgba(64, 224, 208, 0.2);
+  border-color: #40e0d0;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(64, 224, 208, 0.3);
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 160px;
+  justify-content: center;
+}
+
+.ctaPrimary {
+  background: linear-gradient(45deg, #40e0d0, #00bcd4);
+  color: #000000;
+  box-shadow: 0 8px 25px rgba(64, 224, 208, 0.3);
+}
+
+.ctaPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(64, 224, 208, 0.4);
+  filter: brightness(1.1);
+  color: var(--text-tertiary);
+}
+
+.ctaSecondary {
+  background: transparent;
+  color: #40e0d0;
+  border: 2px solid #40e0d0;
+}
+
+.ctaSecondary:hover {
+  background: #40e0d0;
+  color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(64, 224, 208, 0.3);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .heroCard {
+    padding: 40px 20px;
+  }
+
+  .heroName {
+    font-size: 36px;
+  }
+
+  .typewriterText {
+    font-size: 20px;
+  }
+
+  .typewriterContainer {
+    height: 50px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ctaButton {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroName {
+    font-size: 28px;
+  }
+
+  .typewriterText {
+    font-size: 18px;
+  }
+
+  .socialList {
+    gap: 15px;
+  }
+
+  .socialLink {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+}

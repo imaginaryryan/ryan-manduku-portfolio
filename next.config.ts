@@ -1,7 +1,26 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+  // Add performance optimizations:
+  compress: true,
 
-export default nextConfig;
+  images: {
+    domains: ['fonts.googleapis.com', 'fonts.gstatic.com'],
+  },
+  
+  async headers() {
+    return [
+      {
+        source: '/fonts/(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ]
+  },
+}
+
+module.exports = nextConfig

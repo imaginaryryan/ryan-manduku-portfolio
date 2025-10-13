@@ -1,0 +1,493 @@
+/* Services Section CSS Module */
+.servicesSection {
+  position: relative;
+  padding: 5rem 0;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Dark mode support */
+:global(.dark) .servicesSection {
+  background: linear-gradient(135deg, #4C1D95 0%, #5B21B6 25%, #6D28D9 50%, #7C3AED 75%, #8B5CF6 100%);
+}
+
+/* Background decorative elements */
+.servicesSection::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+}
+
+.servicesSection::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  right: 15%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(30px);
+}
+
+/* Container */
+.servicesContainer {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  z-index: 10;
+}
+
+/* Header Section */
+.servicesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.servicesTitleWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.servicesSubtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.servicesTitle {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.servicesTitle .highlight {
+  color: #10B981; /* Green accent - change to #FDE047 for yellow */
+  background: #B99CDC;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.highlight {
+  color: #10B981; /* Green accent - change to #FDE047 for yellow */
+  background: #B99CDC;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Header Button Container */
+.headerButtonContainer {
+  /* This container is for positioning the button */
+}
+
+/* View All Services Button */
+.viewAllBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #10B981; /* Change to #FDE047 for yellow */
+  color: rgb(8, 8, 8);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+}
+
+.viewAllBtn:hover {
+  background: #FCD34D; /* Change to #FCD34D for yellow */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
+}
+
+.viewAllBtn a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.viewAllBtn .icon {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #10B981;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #10B981;
+}
+
+/* Services Grid */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Service Card */
+.serviceCard {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 0 auto;
+}
+
+/* First card (UI/UX Design) - White background */
+.serviceCard.primary {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.primary {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Other cards - Transparent with blur */
+.serviceCard.secondary {
+  background: rgba(139, 92, 246, 0.2);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.secondary {
+  background: rgba(139, 92, 246, 0.2);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hover Effects */
+.serviceCard:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.serviceCard.primary:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+  border-color: #FDE047; /* Yellow border on hover */
+}
+
+.primary:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.3);
+  border-color: #FDE047; /* Yellow border on hover */
+}
+
+.serviceCard.secondary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: #FDE047; /* Yellow border on hover */
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: #FDE047; /* Yellow border on hover */
+}
+
+/* Card Icon */
+.cardIcon {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.serviceCard.primary .cardIcon {
+  background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+  color: white;
+}
+
+.primary .cardIcon {
+  background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+  color: white;
+}
+
+.serviceCard.secondary .cardIcon {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.secondary .cardIcon {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.serviceCard:hover .cardIcon {
+  transform: rotate(360deg) scale(1.1);
+  background: linear-gradient(135deg, #FDE047, #FCD34D);
+  color: #1F2937;
+}
+
+.cardIcon svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Card Title */
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.serviceCard.primary .cardTitle {
+  color: #1F2937;
+}
+
+.primary .cardTitle {
+  color: #1F2937;
+}
+
+.serviceCard.secondary .cardTitle {
+  color: white;
+}
+
+.secondary .cardTitle {
+  color: white;
+}
+
+.serviceCard:hover .cardTitle {
+  color: #1F2937;
+}
+
+/* Card Description */
+.cardDescription {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.serviceCard.primary .cardDescription {
+  color: #6B7280;
+}
+
+.primary .cardDescription {
+  color: #6B7280;
+}
+
+.serviceCard.secondary .cardDescription {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.secondary .cardDescription {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.serviceCard:hover .cardDescription {
+  color: #4B5563;
+  opacity: 1;
+}
+
+/* Learn More Link */
+.learnMore {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #10B981; /* Change to #FDE047 for yellow */
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.serviceCard:hover .learnMore {
+  opacity: 1;
+  transform: translateY(0);
+  color: #FDE047; /* Yellow on hover */
+}
+
+.learnMore svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.learnMore:hover svg {
+  transform: translateX(4px);
+}
+
+/* Additional Services Grid (when expanded) */
+.additionalServices {
+  margin-top: 3rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.additionalServices.show {
+  opacity: 1;
+  max-height: 600px;
+}
+
+.show {
+  opacity: 1;
+  max-height: 600px;
+}
+
+/* Bottom CTA */
+.bottomCta {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.ctaText {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .servicesHeader {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .servicesTitle {
+    font-size: 2.5rem;
+  }
+  
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .serviceCard {
+    width: 280px;
+    height: 280px;
+    padding: 1.5rem;
+  }
+  
+  .cardIcon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .cardIcon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .cardTitle {
+    font-size: 1.25rem;
+  }
+  
+  .cardDescription {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .servicesSection {
+    padding: 3rem 0;
+  }
+  
+  .servicesContainer {
+    padding: 0 0.75rem;
+  }
+  
+  .servicesTitle {
+    font-size: 2rem;
+  }
+  
+  .serviceCard {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* Animation Classes */
+.fadeIn {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.stagger1 { animation-delay: 0.1s; }
+.stagger2 { animation-delay: 0.2s; }
+.stagger3 { animation-delay: 0.3s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse animation for the view all button */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 25px rgba(16, 185, 129, 0.5);
+  }
+}
