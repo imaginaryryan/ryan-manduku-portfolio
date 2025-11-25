@@ -45,7 +45,7 @@ const skillsData: SkillCategory[] = [
       },
       { 
         name: 'Tailwind CSS', 
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg', 
+        icon: '/tailwind.png', 
         proficiency: 90,
         description: 'Modern utility-first CSS framework for rapid UI development'
       }
@@ -99,7 +99,7 @@ const skillsData: SkillCategory[] = [
       },
       { 
         name: 'Redis', 
-        icon: '/redis.png', 
+        icon: '/redis.svg', 
         proficiency: 78,
         description: 'In-memory caching and session management'
       },
@@ -153,7 +153,7 @@ const skillsData: SkillCategory[] = [
       },
       { 
         name: 'AWS', 
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg', 
+        icon: '/aws.png', 
         proficiency: 80,
         description: 'Cloud services, Lambda, S3, and infrastructure management'
       },

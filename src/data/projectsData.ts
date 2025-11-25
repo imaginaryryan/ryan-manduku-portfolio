@@ -70,24 +70,44 @@ export const projects: Project[] = [
   // },
    
     {
-    id: '5',
-    title: 'Tobacco Management & Detection System',
+    id: '4',
+    title: 'Chitungwiza Utility Fault Reporting System',
     description: 'AI-powered detection system.',
     detailedDescription: 'AI-powered tobacco detection system using CLIP with 95% accuracy, featuring multi-user...',
-    image: '/ryanpics.jpg',
+    image: '/chitungwiza fault reporting.PNG',
     technologies: [
       { name: 'Python', color: 'bg-black' },
       { name: 'React', color: 'bg-blue-600' },
       { name: 'Laravel', color: 'bg-cyan-500' },
-      { name: 'CLIP', color: 'bg-green-600' },
-      { name: 'Pusher', color: 'bg-green-600' },
-      { name: 'REST API', color: 'bg-green-600' },
-      { name: 'AI/ML', color: 'bg-purple-600' }
+      // { name: 'CLIP', color: 'bg-green-600' },
+      // { name: 'Pusher', color: 'bg-green-600' },
+      // { name: 'REST API', color: 'bg-green-600' },
+      // { name: 'AI/ML', color: 'bg-purple-600' }
     ],
     githubUrl: 'https://github.com/example/ecommerce',
     liveUrl: 'https://example-ecommerce.com',
     category: 'Full-Stack'
-  },
+  }, 
+  
+  // {
+  //   id: '5',
+  //   title: 'Tobacco Management & Detection System',
+  //   description: 'AI-powered detection system.',
+  //   detailedDescription: 'AI-powered tobacco detection system using CLIP with 95% accuracy, featuring multi-user...',
+  //   image: '/ryanpics.jpg',
+  //   technologies: [
+  //     { name: 'Python', color: 'bg-black' },
+  //     { name: 'React', color: 'bg-blue-600' },
+  //     { name: 'Laravel', color: 'bg-cyan-500' },
+  //     { name: 'CLIP', color: 'bg-green-600' },
+  //     { name: 'Pusher', color: 'bg-green-600' },
+  //     { name: 'REST API', color: 'bg-green-600' },
+  //     { name: 'AI/ML', color: 'bg-purple-600' }
+  //   ],
+  //   githubUrl: 'https://github.com/example/ecommerce',
+  //   liveUrl: 'https://example-ecommerce.com',
+  //   category: 'Full-Stack'
+  // },
 
   {
     id: '6',
